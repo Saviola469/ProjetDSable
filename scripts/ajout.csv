@@ -1,0 +1,17 @@
+
+    #stabilisation après ajout
+    x, h_init, h_ajout, h_final = lire_dernier_run("../../datas/data_ajout.csv")
+
+    plt.figure(figsize=(8, 4))
+    plt.plot(x, h_init, "o-", label="init")
+    plt.plot(x, h_ajout, "o-", label="apres ajout")
+    plt.plot(x, h_final, "o-", label="apres stabilisation")
+    plt.xlabel("indice")
+    plt.ylabel("hauteur")
+    plt.title("Avant ajout / Apres stabilisation")
+    plt.grid(alpha=0.3)
+    plt.legend()
+    plt.tight_layout()
+    plt.savefig("plots/ajout_grain.png", dpi=150)
+    plt.close()
+
